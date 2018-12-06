@@ -7072,7 +7072,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -729204115
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -11403,6 +11403,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4582474366827210, guid: 455291e8d02849c488a49b939f674117,
     type: 2}
   m_PrefabInternal: {fileID: 1027053857}
+--- !u!1001 &1194563664
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4710637087663614, guid: 0bd9230c48f08dd419014983ea03f786, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710637087663614, guid: 0bd9230c48f08dd419014983ea03f786, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710637087663614, guid: 0bd9230c48f08dd419014983ea03f786, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710637087663614, guid: 0bd9230c48f08dd419014983ea03f786, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710637087663614, guid: 0bd9230c48f08dd419014983ea03f786, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710637087663614, guid: 0bd9230c48f08dd419014983ea03f786, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710637087663614, guid: 0bd9230c48f08dd419014983ea03f786, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710637087663614, guid: 0bd9230c48f08dd419014983ea03f786, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0bd9230c48f08dd419014983ea03f786, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1230711453
 GameObject:
   m_ObjectHideFlags: 3

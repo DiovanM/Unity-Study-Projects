@@ -8,13 +8,14 @@ public class Player : MonoBehaviour {
     [SerializeField] private float runSpeed;
     [SerializeField] private float jumpVelocity = 5;
     [SerializeField] private float climbVelocity = 1;
+    [SerializeField] private Collider2D bodyCollider;
+    [SerializeField] private Collider2D feetCollider;
 
     public bool isAlive = true;
 
     private Rigidbody2D myRigidbody;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
-    private Collider2D myCollider;
     private float initialGravityScale;
 
     private enum Facing { left, right }        
@@ -24,7 +25,6 @@ public class Player : MonoBehaviour {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
-        myCollider = GetComponent<Collider2D>();
         initialGravityScale = myRigidbody.gravityScale;
     }
 	
@@ -58,7 +58,7 @@ public class Player : MonoBehaviour {
 
     private void Jump()
     {
-        if (!myCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
+        if (!feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
 
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
@@ -69,7 +69,7 @@ public class Player : MonoBehaviour {
 
     private void ClimbLadder()
     {
-        if (!myCollider.IsTouchingLayers(LayerMask.GetMask("Ladder"))) {
+        if (!bodyCollider.IsTouchingLayers(LayerMask.GetMask("Ladder"))) {
             myAnimator.SetBool("Climbing", false);
             myAnimator.SetBool("ClimbingIdle", false);
             myRigidbody.gravityScale = initialGravityScale;
