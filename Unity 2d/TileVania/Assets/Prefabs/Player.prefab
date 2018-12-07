@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1909077596174250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.54, y: 3.27, z: 0}
+  m_LocalPosition: {x: -16.42, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -144,11 +144,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0f60c4e5bb38943bd7f8a2799f5dad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 7
-  jumpVelocity: 15
+  runSpeed: 250
+  jumpVelocity: 20
   climbVelocity: 4
   bodyCollider: {fileID: 61041681045631266}
   feetCollider: {fileID: 61988995730100150}
+  deathKick: {x: 0, y: 25}
   isAlive: 1
 --- !u!212 &212899543028623574
 SpriteRenderer:
@@ -183,7 +184,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2133365823
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300010, guid: a8cf53eb80bef9148a9dc7ecc4487151, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
