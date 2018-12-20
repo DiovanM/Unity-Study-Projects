@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pathfinder : MonoBehaviour
 {
 
-    Vector3 startBlock;
-    Vector3 endBlock;           
+    public GridBlock startBlock;
+    public GridBlock endBlock;           
 
 }

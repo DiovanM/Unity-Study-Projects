@@ -5,11 +5,15 @@ using UnityEngine;
 public class GridBlock : MonoBehaviour
 {
 
-    private const int gridSize = 1;
+    private bool isWall;
+    public bool tracked;
 
-    public int GetGridSize()
-    {
-        return gridSize;
-    }
+    public GridBlock previousBlock;
+
+    public int gValue;
+    public int hValue;
+
+    public int fValue { get { return gValue + hValue; } }
+    
 
 }
