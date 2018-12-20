@@ -101,7 +101,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6761870276445018445}
-  - component: {fileID: 4896743771246852420}
+  - component: {fileID: 6591334510793214501}
+  - component: {fileID: 7672946451566042843}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -117,7 +118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395994493306880042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 30, y: 0, z: 20}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 187247987677221218}
@@ -129,7 +130,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4896743771246852420
+--- !u!114 &6591334510793214501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395994493306880042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8610713261e62f47a9fe7d0100c0625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7672946451566042843
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5addc3e4a66598949808e2f3fa2bcce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: 10
+  snapPos: {x: 30, y: 0, z: 20}
 --- !u!1 &3169270922973307481
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +550,7 @@ RectTransform:
   m_GameObject: {fileID: 6604067111273451098}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.008986271, y: 0.008986271, z: 0.008986271}
+  m_LocalScale: {x: 0.015423137, y: 0.015423137, z: 0.015423137}
   m_Children: []
   m_Father: {fileID: 1504992837476059984}
   m_RootOrder: 0
@@ -592,7 +605,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6604067111273451098}
-  m_Text: 0,0,0
+  m_Text: 30,20
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
