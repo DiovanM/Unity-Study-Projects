@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GridBlock : MonoBehaviour
 {
-        
     private bool isWall;
     public Vector2Int gridPos;
     public bool blocked;
-    public bool tracked;
+    public bool start;
+    public bool end;
 
     public GridBlock previousBlock;
 
@@ -22,9 +22,9 @@ public class GridBlock : MonoBehaviour
         gridPos = new Vector2Int((int)transform.position.x, (int)transform.position.z);
     }
 
-    public void SetColor()
+    public void SetColor(Color color)
     {
-        gameObject.transform.GetChild(1).gameObject.GetComponent<MeshRenderer>().material.color = Color.blue;
+        gameObject.transform.GetChild(1).gameObject.GetComponent<MeshRenderer>().material.color = color;
     }
 
 }
