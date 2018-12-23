@@ -65,7 +65,9 @@
     <Compile Include="Assets\Scripts\DamageManager.cs" />
     <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GridBlock.cs" />
+    <Compile Include="Assets\Scripts\NeutralBlockBehaviour.cs" />
     <Compile Include="Assets\Scripts\Pathfinder.cs" />
     <Compile Include="Assets\Scripts\TowerBehaviour.cs" />
     <Compile Include="Assets\Scripts\TowerShot.cs" />

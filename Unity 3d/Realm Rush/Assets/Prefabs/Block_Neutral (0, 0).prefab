@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6761870276445018445}
   - component: {fileID: 7672946451566042843}
+  - component: {fileID: 8562716794228381684}
+  - component: {fileID: 4950242519616653724}
   m_Layer: 0
-  m_Name: Neutral Block
+  m_Name: Block_Neutral (0, 0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +47,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPos: {x: 0, y: 0, z: 0}
+--- !u!114 &8562716794228381684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395994493306880042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b00af1b3b8434bae60f1667a26484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &4950242519616653724
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395994493306880042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 1.2718543, z: 0.9}
+  m_Center: {x: 0, y: -0.8655161, z: 0}
 --- !u!1001 &5766079379443533003
 PrefabInstance:
   m_ObjectHideFlags: 0

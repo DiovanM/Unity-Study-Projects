@@ -22,9 +22,4 @@ public class GridBlock : MonoBehaviour
         gridPos = new Vector2Int((int)transform.position.x, (int)transform.position.z);
     }
 
-    public void SetColor(Color color)
-    {
-        gameObject.transform.GetChild(1).gameObject.GetComponent<MeshRenderer>().material.color = color;
-    }
-
 }

@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6761870276445018445}
   - component: {fileID: 7672946451566042843}
-  - component: {fileID: 3858311940976385819}
   m_Layer: 0
-  m_Name: Tower
+  m_Name: FakeTower (0, 0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,24 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPos: {x: 0, y: 0, z: 0}
---- !u!114 &3858311940976385819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395994493306880042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 525244679c1b5cb41999f74b0f419c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotInterval: 2.5
-  towerRange: 4
-  shotHolder: {fileID: 8547341339416465408}
-  shotParticle: {fileID: 7937121485972926221, guid: 5a317e55510acf14eab6588abc36d0bf,
-    type: 3}
-  enemies: []
 --- !u!1 &1590261815401152304
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +85,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1457945536329988, guid: f27a4597efbf3694b95687e7aeef7fcc, type: 3}
       propertyPath: m_Name
-      value: TowerTop
+      value: FakeTower
       objectReference: {fileID: 0}
     - target: {fileID: 4501762900964862, guid: f27a4597efbf3694b95687e7aeef7fcc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -162,6 +143,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.049999997
       objectReference: {fileID: 0}
+    - target: {fileID: 23395027866721958, guid: f27a4597efbf3694b95687e7aeef7fcc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63597c219ec41b9409af5877167dbbd3, type: 2}
     - target: {fileID: 33946681911427330, guid: f27a4597efbf3694b95687e7aeef7fcc,
         type: 3}
       propertyPath: m_Mesh
@@ -242,6 +228,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 23395027866721958, guid: f27a4597efbf3694b95687e7aeef7fcc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63597c219ec41b9409af5877167dbbd3, type: 2}
     - target: {fileID: 33946681911427330, guid: f27a4597efbf3694b95687e7aeef7fcc,
         type: 3}
       propertyPath: m_Mesh

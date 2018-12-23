@@ -16,6 +16,8 @@ public class CubeEditor : MonoBehaviour
 
         transform.position = snapPos;
 
+        gameObject.name = transform.GetChild(0).name + " (" + snapPos.x.ToString() + ", " + snapPos.z.ToString() + ")";
+
     }
 
 }
