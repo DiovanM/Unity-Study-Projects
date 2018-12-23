@@ -44,3 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 0
+  towerPrefab: {fileID: 1395994493306880042, guid: 69a4e6bdba405114fbe02dbe7294cc17,
+    type: 3}
+  fakeTowerPrefab: {fileID: 1395994493306880042, guid: 1370d935fca768446958a2262e815ab1,
+    type: 3}
+  towerLimit: 5

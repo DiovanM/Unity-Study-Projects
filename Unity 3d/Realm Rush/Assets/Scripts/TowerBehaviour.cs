@@ -10,6 +10,8 @@ public class TowerBehaviour : MonoBehaviour
     [SerializeField] Transform shotHolder;
     [SerializeField] GameObject shotParticle;
 
+    [HideInInspector] public NeutralBlockBehaviour myBlock;
+
     public EnemyBehaviour[] enemies;
     private GameObject top;
     private bool isAnyEnemyClose = false;

@@ -8,8 +8,8 @@ public class NeutralBlockBehaviour : MonoBehaviour
     [HideInInspector] public GameManager.GameState gameState;
     [HideInInspector] public GameObject towerPrefab;
     [HideInInspector] public GameObject fakeTowerPrefab;
+    [HideInInspector] public bool hasTower = false;
     private GameObject fakeTower;
-    private bool hasTower = false;
 
     private void OnMouseDown()
     {
@@ -17,8 +17,7 @@ public class NeutralBlockBehaviour : MonoBehaviour
         {
             if (!hasTower)
             {
-                GameObject tower = Instantiate(towerPrefab, transform.position, Quaternion.identity);
-                tower.transform.SetParent(GameObject.Find("TowersParent").transform);
+                FindObjectOfType<TowerFactory>().AddTower(this);
                 hasTower = true;
             }
         }
@@ -30,8 +29,7 @@ public class NeutralBlockBehaviour : MonoBehaviour
         {
             if (!hasTower)
             {
-                fakeTower = Instantiate(fakeTowerPrefab, transform.position, Quaternion.identity);
-                fakeTower.transform.SetParent(gameObject.transform);
+                FindObjectOfType<TowerFactory>().AddFakeTower(this);
             }
         }
     }
@@ -42,7 +40,7 @@ public class NeutralBlockBehaviour : MonoBehaviour
         {
             if (!hasTower)
             {
-                Destroy(fakeTower);
+                FindObjectOfType<TowerFactory>().RemoveFakeTower(this);
             }
         }
     }
@@ -52,8 +50,6 @@ public class NeutralBlockBehaviour : MonoBehaviour
         gameState = state;
         this.towerPrefab = towerPrefab;
         this.fakeTowerPrefab = fakeTowerPrefab;
-
-        if (fakeTower) Destroy(fakeTower);
     }
 
 }

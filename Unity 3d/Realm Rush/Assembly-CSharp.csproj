@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\NeutralBlockBehaviour.cs" />
     <Compile Include="Assets\Scripts\Pathfinder.cs" />
     <Compile Include="Assets\Scripts\TowerBehaviour.cs" />
+    <Compile Include="Assets\Scripts\TowerFactory.cs" />
     <Compile Include="Assets\Scripts\TowerShot.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Unity/Unity study projects/Unity 3d/Realm Rush/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

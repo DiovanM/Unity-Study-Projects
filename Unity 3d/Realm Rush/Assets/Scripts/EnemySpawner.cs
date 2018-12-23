@@ -7,6 +7,8 @@ public class EnemySpawner : MonoBehaviour
     [HideInInspector] public GameManager.GameState gameState;
 
     [SerializeField] private GameObject enemyPrefab;
+    private int enemiesSpawned = 0;
+    private int enemiesLimit;
     public float spawnRate = 5f;
     public bool spawning = false;
 
@@ -17,16 +19,28 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(StartSpawning());
     }
 
+    public void Setup(GameManager.GameState initialState, int enemiesLimit)
+    {
+        SetGameState(initialState);
+        this.enemiesLimit = enemiesLimit;
+    }
+
+    public void SetGameState(GameManager.GameState state)
+    {
+        gameState = state;
+        if (state == GameManager.GameState.InGame)
+        {
+            StartCoroutine(StartSpawning());
+        }
+    }
+
     public IEnumerator StartSpawning()
     {
-        while (true)
+        while (gameState == GameManager.GameState.InGame && enemiesSpawned < enemiesLimit)
         {
-            while (gameState == GameManager.GameState.InGame)
-            {
-                SpawnEnemy();
-                yield return new WaitForSeconds(spawnRate);
-            }
-            yield return new WaitForEndOfFrame();
+            SpawnEnemy();
+            enemiesSpawned++;
+            yield return new WaitForSeconds(spawnRate);
         }
     }
 
