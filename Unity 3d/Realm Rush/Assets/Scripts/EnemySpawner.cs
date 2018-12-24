@@ -9,20 +9,18 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     private int enemiesSpawned = 0;
     private int enemiesLimit;
+    private float enemyDamage;
+    private float enemyBlockMovementTime;
     public float spawnRate = 5f;
     public bool spawning = false;
 
     public List<GridBlock> path = new List<GridBlock>();
 
-    private void Start()
+    public void Setup(GameManager.GameState initialState, int enemiesLimit, float enemyDamage, float enemyBlockMovementTime)
     {
-        StartCoroutine(StartSpawning());
-    }
-
-    public void Setup(GameManager.GameState initialState, int enemiesLimit)
-    {
-        SetGameState(initialState);
         this.enemiesLimit = enemiesLimit;
+        this.enemyDamage = enemyDamage;
+        this.enemyBlockMovementTime = enemyBlockMovementTime;
     }
 
     public void SetGameState(GameManager.GameState state)
@@ -30,6 +28,7 @@ public class EnemySpawner : MonoBehaviour
         gameState = state;
         if (state == GameManager.GameState.InGame)
         {
+            enemiesSpawned = 0;
             StartCoroutine(StartSpawning());
         }
     }
@@ -42,13 +41,15 @@ public class EnemySpawner : MonoBehaviour
             enemiesSpawned++;
             yield return new WaitForSeconds(spawnRate);
         }
+
+        StopCoroutine(StartSpawning());
     }
 
     private void SpawnEnemy()
     {
         GameObject enemy = Instantiate(enemyPrefab, path[0].transform.position, Quaternion.identity);
         enemy.transform.SetParent(GameObject.Find("EnemiesParent").transform);
-        enemy.GetComponent<EnemyBehaviour>().StartMovement(path);
+        enemy.GetComponent<EnemyBehaviour>().StartMovement(path, enemyDamage, enemyBlockMovementTime);
     }
 
     void Update()

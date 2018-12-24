@@ -6,8 +6,8 @@ public class EnemyBehaviour : MonoBehaviour
 {
 
     private List<GridBlock> path = new List<GridBlock>();
-
     private Vector2Int gridPos;
+    private float damage;
 
     public float timeToMoveToBlock = 2f;
 
@@ -16,12 +16,13 @@ public class EnemyBehaviour : MonoBehaviour
         gridPos = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
     }
 
-    public void StartMovement(List<GridBlock> path)
+    public void StartMovement(List<GridBlock> path, float damage, float timeToMoveToBlock)
     {
         this.path = path;
+        this.damage = damage;
+        this.timeToMoveToBlock = timeToMoveToBlock;
 
         StartCoroutine(Move(1));
-
     }
 
     private IEnumerator Move(int blockIndex)
@@ -29,7 +30,8 @@ public class EnemyBehaviour : MonoBehaviour
         StopCoroutine(Move(blockIndex));
         if (blockIndex == path.Count)
         {
-            Debug.Log("Reached End");
+            FindObjectOfType<FriendlyBase>().TakeDamage(damage);
+            FindObjectOfType<GameManager>().IncreaseDestroyedEnemies();
             Destroy(gameObject);
             yield break;
         }

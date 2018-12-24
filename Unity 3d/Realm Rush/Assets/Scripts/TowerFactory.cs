@@ -10,7 +10,7 @@ public class TowerFactory : MonoBehaviour
     public GameObject towerPrefab;
     public GameObject fakeTowerPrefab;
 
-    private Queue<TowerBehaviour> towers = new Queue<TowerBehaviour>();
+    [HideInInspector] public Queue<TowerBehaviour> towers = new Queue<TowerBehaviour>();
     private GameObject fakeTower;
     private int towerLimit;
 
@@ -24,10 +24,7 @@ public class TowerFactory : MonoBehaviour
     public void SetGameState(GameManager.GameState state)
     {
         gameState = state;
-        if (state == GameManager.GameState.InGame)
-        {
-            if (fakeTower) fakeTower.SetActive(false);
-        }
+        if (fakeTower) fakeTower.SetActive(false);
     }
 
     public void AddTower(NeutralBlockBehaviour block)
